@@ -1,0 +1,141 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  width: 37.5rem;
+  padding: 4.8rem 3.6rem;
+}
+
+header {
+  margin-bottom: 4.8rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+}
+
+.card {
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+img {
+  width: 4.8rem;
+  height: 4.8rem;
+  align-self: flex-end;
+  margin-top: 3rem;
+}
+
+.card__supervisor {
+  border-top: 4px solid var(--cyan);
+}
+.card__team {
+  border-top: 4px solid var(--red);
+}
+.card__karma {
+  border-top: 4px solid var(--orange);
+}
+.card__calculator {
+  border-top: 4px solid var(--blue);
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+h3 {
+  color: var(--very-dark-blue);
+}
+
+.main-heading {
+  color: var(--grayish-blue);
+  font-weight: 200;
+}
+
+.secondary-heading {
+  color: var(--very-dark-blue);
+  margin-bottom: 1.2rem;
+}
+
+/* Media Queries */
+
+/* for screens bigger than 384px */
+@media (min-width: 24em) {
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  header {
+    max-width: 50rem;
+    margin: 7rem auto 0;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    transform: translateY(-8rem);
+  }
+
+  .card {
+    width: 25.5rem;
+  }
+  .card__supervisor {
+    grid-row: 1/3;
+    align-self: center;
+  }
+  .card__team {
+    grid-row: 1/2;
+  }
+
+  .card__karma {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .card__calculator {
+    grid-row: 1/3;
+    align-self: center;
+  }
+
+  .main-heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+  .secondary-heading {
+    font-size: 2.4rem;
+  }
+  .paragraph {
+    font-size: 1.6rem;
+  }
+}

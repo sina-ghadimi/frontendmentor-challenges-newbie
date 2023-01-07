@@ -1,0 +1,165 @@
+:root {
+  --desaturated_red: hsl(0, 36%, 70%);
+  --soft_red: hsl(0, 93%, 68%);
+  --dark_grayish_red: hsl(0, 6%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container__left {
+  padding: 9.6rem 12.8rem;
+  width: 60%;
+  background-image: url(images/bg-pattern-desktop.svg);
+}
+
+.inner-container {
+  max-width: 45rem;
+  margin: auto;
+}
+
+.logo {
+  margin-bottom: 6.4rem;
+}
+
+.heading {
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  margin-bottom: 4.8rem;
+  text-transform: uppercase;
+}
+
+span {
+  font-weight: 200;
+  color: var(--desaturated_red);
+}
+
+#form {
+  position: relative;
+}
+
+.input {
+  padding: 1.6rem 3.2rem;
+  border: 1px solid var(--desaturated_red);
+  border-radius: 10rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--desaturated_red);
+}
+
+.error-icon,
+.btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.2rem 3.4rem;
+}
+
+.error-icon {
+  right: 6rem;
+  display: none;
+}
+
+form.error .error-icon {
+  display: block;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 5rem;
+  border: 1px solid var(--desaturated_red);
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.text {
+  color: var(--desaturated_red);
+  margin-bottom: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.container__right {
+  width: 40%;
+}
+
+.hero-img {
+  height: 100vh;
+  width: 100%;
+}
+
+small {
+  color: var(--soft_red);
+  font-size: 1.4rem;
+  display: none;
+}
+
+form.error small {
+  display: block;
+}
+
+.bg-mobile {
+  display: none;
+}
+
+@media (max-width: 38em) {
+  .logo {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .bg-mobile {
+    display: block;
+    margin-left: -4rem;
+    margin-right: -4rem;
+    width: calc(100% + 8rem);
+  }
+
+  .inner-container {
+    max-width: 100%;
+  }
+  .container__left {
+    width: 100%;
+    padding: 0;
+  }
+  .container__right {
+    display: none;
+  }
+
+  .heading {
+    margin-top: 4.8rem;
+    margin-bottom: 2.4rem;
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 3.6rem;
+    padding: 1.2rem 2.4rem;
+  }
+
+  .text{
+    padding:0 4.8rem ;
+  }
+
+  #form {
+    margin-left:4.8rem;
+    margin-right: 6.4rem;
+  }
+
+}

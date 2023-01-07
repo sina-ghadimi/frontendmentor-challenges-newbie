@@ -1,0 +1,134 @@
+:root {
+  /* Primary */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral */
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--cream);
+}
+
+.card {
+  width: 36.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card__img {
+  background-image: url("images/image-product-mobile.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 24rem;
+}
+
+.card__text {
+  background-color: var(--white);
+  padding: 3rem;
+  font-size: 1.4rem;
+}
+
+.card__title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1.2rem;
+}
+.card__heading {
+  color: var(--very-dark-blue);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.card__heading-txt {
+  font-family: "Fraunces", serif;
+}
+.card__paragraph {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 3.6rem;
+  line-height: 1.7;
+}
+.card__price {
+  font-family: "Fraunces", serif;
+  color: var(--dark-cyan);
+  margin-bottom: 2.6rem;
+  display: inline-block;
+  margin-right: 3.6rem;
+  font-size: 2.4rem;
+}
+.card__price-sub {
+  display: inline-block;
+  text-decoration: line-through;
+  color: var(--very-dark-blue);
+}
+
+.card__button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card__button-svg {
+  margin-right: 5px;
+}
+
+/* for screens bigger than 384px */
+
+@media (min-width: 24em) {
+  .card {
+    flex-direction: row;
+    width: 60rem;
+    height: 43rem;
+  }
+
+  .card__img {
+    background-image: url("images/image-product-desktop.jpg");
+    background-size: cover;
+    height: auto;
+    width: 30rem;
+  }
+
+  .card__text {
+    padding: 3.6rem 3rem;
+    width: 30rem;
+  }
+
+  .card__title {
+    margin-bottom: 2.4rem;
+  }
+  .card__heading {
+    margin-bottom: 2.4rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+}
